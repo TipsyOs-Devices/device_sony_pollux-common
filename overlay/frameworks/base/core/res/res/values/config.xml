@@ -14,19 +14,13 @@
          device is data-only. -->
     <bool name="config_voice_capable">false</bool>
 
-    <!-- Enable emergency call when sim is locked or puk locked. Some countries/carriers do not
-         allow emergency calls to be placed without the IMSI, which is locked in the SIM.
-         If so, this should be set to 'false' in an overlay. -->
-    <bool name="config_enable_emergency_call_while_sim_locked">false</bool>
+    <!-- This device does not allow sms service. -->
+    <bool name="config_sms_capable">false</bool>
 
     <!-- Indicate whether closing the lid causes the device to go to sleep and opening
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
-
-    <!-- Flag indicating whether we should enable the automatic brightness in Settings.
-         config_hardware_automatic_brightness_available is not set, so we will use software implementation -->
-    <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
         The N entries of this array define N + 1 zones as follows:
@@ -106,9 +100,6 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7.
     <integer name="config_deviceHardwareWakeKeys">64</integer> -->
-
-    <!-- SD card is hot-pluggable on this device -->
-    <bool name="config_batterySdCardAccessibility">true</bool>
 
     <!-- Enable lockscreen rotation by default -->
     <bool name="config_enableLockScreenRotation">true</bool>
